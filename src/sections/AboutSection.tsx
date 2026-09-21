@@ -1,6 +1,5 @@
 import { brandConfig } from "@/data/brandConfig";
 import SectionReveal from "@/components/SectionReveal";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 
 export default function AboutSection() {
   return (
@@ -11,13 +10,15 @@ export default function AboutSection() {
           <SectionReveal>
             <div className="relative">
               <div className="rounded-3xl overflow-hidden aspect-[4/3]">
-                <div className="w-full h-full bg-brand-cream-dark border-2 border-dashed border-brand-brown/20 rounded-3xl flex items-center justify-center">
-                  <ImagePlaceholder
-                    category="restaurant"
-                    className="w-full h-full rounded-none"
-                    label="Restaurant / Food preparation"
-                  />
-                </div>
+                <img
+                  src="/images/restaurant-interior.jpeg"
+                  alt="Sholly-T restaurant"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).style.display = "none";
+                  }}
+                />
               </div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-brand-orange/10 rounded-2xl -z-10" />
               <div className="absolute -top-4 -left-4 w-16 h-16 bg-brand-yellow/20 rounded-xl -z-10" />

@@ -1,7 +1,5 @@
 import SectionReveal from "@/components/SectionReveal";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
-import { MapPin, Clock, Phone, MessageCircle } from "lucide-react";
-import { brandConfig } from "@/data/brandConfig";
+import { MapPin, Clock, MessageCircle } from "lucide-react";
 import WhatsAppLink from "@/components/WhatsAppLink";
 
 export default function RestaurantExperienceSection() {
@@ -11,9 +9,7 @@ export default function RestaurantExperienceSection() {
         <SectionReveal>
           <div className="text-center mb-12">
             <span className="section-subheading mb-3 block">Experience</span>
-            <h2 className="section-heading mb-4">
-              VISIT US
-            </h2>
+            <h2 className="section-heading mb-4">VISIT US</h2>
             <p className="text-brand-brown/60 max-w-lg mx-auto">
               Whether you're dining in, grabbing takeaway, or ordering for delivery — we're here for you.
             </p>
@@ -59,21 +55,28 @@ export default function RestaurantExperienceSection() {
           ))}
         </div>
 
-        {/* Restaurant Images */}
         <SectionReveal delay={200}>
           <div className="grid sm:grid-cols-2 gap-6">
-            <div className="rounded-3xl overflow-hidden aspect-[16/10] bg-brand-cream-dark border-2 border-dashed border-brand-brown/20">
-              <ImagePlaceholder
-                category="restaurant"
-                className="w-full h-full rounded-none border-none"
-                label="Restaurant interior"
+            <div className="rounded-3xl overflow-hidden aspect-[16/10] bg-brand-cream-dark border border-brand-brown/10">
+              <img
+                src="/images/restaurant-interior.jpeg"
+                alt="Restaurant interior"
+                className="w-full h-full object-cover"
+                loading="lazy"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).style.display = "none";
+                }}
               />
             </div>
-            <div className="rounded-3xl overflow-hidden aspect-[16/10] bg-brand-cream-dark border-2 border-dashed border-brand-brown/20">
-              <ImagePlaceholder
-                category="restaurant"
-                className="w-full h-full rounded-none border-none"
-                label="Restaurant exterior"
+            <div className="rounded-3xl overflow-hidden aspect-[16/10] bg-brand-cream-dark border border-brand-brown/10">
+              <img
+                src="/images/restaurant-exterior.jpeg"
+                alt="Restaurant exterior"
+                className="w-full h-full object-cover"
+                loading="lazy"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).style.display = "none";
+                }}
               />
             </div>
           </div>

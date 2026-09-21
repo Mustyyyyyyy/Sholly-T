@@ -195,11 +195,11 @@ export const brandConfig: BrandConfig = {
   ],
   galleryImages: [
     { id: "g1", src: "/images/gallery-1.jpeg", alt: "Spaghetti dish", category: "Spaghetti" },
-    { id: "g2", src: "/images/gallery-3.jpeg", alt: "Rice dish", category: "Rice" },
-    { id: "g3", src: "/images/packaging.jpeg", alt: "Packaging", category: "Packaging" },
-    { id: "g4", src: "/images/WhatsApp Image 2026-09-21 at 00.17.12.jpeg", alt: "Food plate", category: "Food" },
-    { id: "g5", src: "/images/WhatsApp Image 2026-09-21 at 00.17.14.jpeg", alt: "Restaurant", category: "Restaurant" },
-    { id: "g6", src: "/images/WhatsApp Image 2026-09-21 at 00.17.15 (1).jpeg", alt: "Food close-up", category: "Food" },
+    { id: "g2", src: "/images/gallery-2.jpeg", alt: "Rice dish", category: "Rice" },
+    { id: "g3", src: "/images/gallery-3.jpeg", alt: "Noodles dish", category: "Noodles" },
+    { id: "g4", src: "/images/gallery-4.jpeg", alt: "Chicken dish", category: "Proteins" },
+    { id: "g5", src: "/images/gallery-5.jpeg", alt: "Restaurant interior", category: "Restaurant" },
+    { id: "g6", src: "/images/gallery-6.jpeg", alt: "Packaging", category: "Packaging" },
   ],
   reviews: [
     { id: "r1", name: "", rating: 5, text: "", source: "Google" },

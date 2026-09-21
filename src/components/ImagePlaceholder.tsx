@@ -29,12 +29,12 @@ export default function ImagePlaceholder({
 
   return (
     <div
-      className={`flex flex-col items-center justify-center ${categoryColors[category]} border-2 border-dashed rounded-2xl overflow-hidden ${className}`}
+      className={`flex flex-col items-center justify-center w-full h-full ${categoryColors[category]} border-2 border-dashed ${className}`}
     >
-      <span className="text-4xl sm:text-5xl mb-2 select-none opacity-60">
+      <span className="text-3xl sm:text-4xl mb-1 select-none opacity-50">
         {categoryIcons[category]}
       </span>
-      <span className="text-brand-brown/40 text-xs sm:text-sm font-medium text-center px-4">
+      <span className="text-brand-brown/30 text-[10px] sm:text-xs font-medium text-center px-2 leading-tight">
         {label || `Image placeholder - ${category}`}
       </span>
     </div>

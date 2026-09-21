@@ -4,13 +4,6 @@ import ImagePlaceholder from "@/components/ImagePlaceholder";
 import WhatsAppLink from "@/components/WhatsAppLink";
 
 export default function PackagingSection() {
-  const packagingImages = [
-    { id: "p1", label: "Branded paper bag", category: "packaging" },
-    { id: "p2", label: "Branded food container", category: "packaging" },
-    { id: "p3", label: "Takeaway packaging", category: "packaging" },
-    { id: "p4", label: "Close-up logo packaging", category: "packaging" },
-  ];
-
   return (
     <section className="py-16 lg:py-24 bg-brand-cream">
       <div className="section-container">
@@ -31,15 +24,38 @@ export default function PackagingSection() {
         </SectionReveal>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
-          {packagingImages.map((img, index) => (
-            <SectionReveal key={img.id} delay={index * 100}>
+          <SectionReveal>
+            <div className="group relative rounded-2xl overflow-hidden aspect-[3/4] bg-brand-cream-dark border border-brand-brown/10 hover:border-brand-orange/40 transition-colors">
+              <img
+                src="/images/packaging.jpeg"
+                alt="Branded packaging"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).style.display = "none";
+                }}
+              />
+              <div className="absolute inset-0 bg-brand-black/0 group-hover:bg-brand-black/20 transition-colors duration-300" />
+              <div className="absolute bottom-0 left-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="text-white text-sm font-semibold">
+                  Branded packaging
+                </span>
+              </div>
+            </div>
+          </SectionReveal>
+
+          {[
+            { id: "p2", label: "Branded food container" },
+            { id: "p3", label: "Takeaway packaging" },
+            { id: "p4", label: "Close-up logo packaging" },
+          ].map((img, index) => (
+            <SectionReveal key={img.id} delay={(index + 1) * 100}>
               <div className="group relative rounded-2xl overflow-hidden aspect-[3/4] bg-brand-cream-dark border-2 border-dashed border-brand-brown/20 hover:border-brand-orange/40 transition-colors">
                 <ImagePlaceholder
                   category="packaging"
                   className="w-full h-full rounded-none border-none"
                   label={img.label}
                 />
-                {/* Hover overlay */}
                 <div className="absolute inset-0 bg-brand-black/0 group-hover:bg-brand-black/20 transition-colors duration-300" />
                 <div className="absolute bottom-0 left-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="text-white text-sm font-semibold">

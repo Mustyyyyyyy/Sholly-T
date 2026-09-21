@@ -19,44 +19,37 @@ export default function GalleryLightbox() {
 
   return (
     <>
-      {/* Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
+      <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
         {images.map((img, index) => (
           <button
             key={img.id}
             onClick={() => setActiveIndex(index)}
-            className={`relative group overflow-hidden rounded-2xl cursor-pointer ${
-              index === 0 ? "col-span-2 sm:col-span-2 lg:col-span-2 row-span-2" : ""
-            }`}
+            className="break-inside-avoid relative group overflow-hidden rounded-2xl cursor-pointer w-full"
           >
-            <div className={`w-full ${index === 0 ? "aspect-square sm:aspect-auto sm:h-full" : "aspect-square"} overflow-hidden`}>
+            <div className="w-full overflow-hidden rounded-2xl">
               {img.src ? (
                 <img
                   src={img.src}
                   alt={img.alt}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                   onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.style.display = "none";
+                    (e.target as HTMLImageElement).style.display = "none";
                   }}
                 />
-              ) : null}
-              {!img.src && (
+              ) : (
                 <ImagePlaceholder
                   category="gallery"
-                  className="w-full h-full rounded-none"
+                  className="aspect-square rounded-2xl border-2 border-dashed"
                   label={img.alt}
                 />
               )}
             </div>
-            {/* Overlay */}
             <div className="absolute inset-0 bg-brand-black/0 group-hover:bg-brand-black/30 transition-colors duration-300 flex items-center justify-center">
               <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-3">
                 <ZoomIn className="w-5 h-5 text-brand-brown" />
               </div>
             </div>
-            {/* Label */}
             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-brand-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <span className="text-white font-semibold text-sm">
                 {img.category}
@@ -66,7 +59,6 @@ export default function GalleryLightbox() {
         ))}
       </div>
 
-      {/* Lightbox */}
       {currentImage && (
         <div
           className="fixed inset-0 z-[70] bg-brand-black/95 flex items-center justify-center p-4"
@@ -86,10 +78,9 @@ export default function GalleryLightbox() {
               <img
                 src={currentImage.src}
                 alt={currentImage.alt}
-                className="w-full h-full object-contain max-h-[85vh] rounded-2xl"
+                className="w-full h-auto max-h-[85vh] rounded-2xl object-contain"
                 onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.style.display = "none";
+                  (e.target as HTMLImageElement).style.display = "none";
                 }}
               />
             ) : (

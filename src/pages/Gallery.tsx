@@ -44,7 +44,7 @@ export default function GalleryPage() {
             </div>
           </SectionReveal>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               "Customer experience",
               "Food preparation",
@@ -52,7 +52,7 @@ export default function GalleryPage() {
               "Delivery moments",
             ].map((label, index) => (
               <SectionReveal key={label} delay={index * 100}>
-                <div className="rounded-2xl overflow-hidden aspect-square bg-brand-cream-dark border-2 border-dashed border-brand-brown/20 flex items-center justify-center">
+                <div className="rounded-2xl overflow-hidden aspect-square bg-brand-cream-dark border-2 border-dashed border-brand-brown/20">
                   <ImagePlaceholder
                     category="gallery"
                     className="w-full h-full rounded-none border-none"
