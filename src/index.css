@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-brand-cream font-body text-brand-black antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-brand-orange text-white font-semibold px-6 py-3 rounded-full transition-all duration-200 hover:bg-brand-orange hover:shadow-lg hover:shadow-brand-orange/30 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98];
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 border-2 border-brand-brown text-brand-brown font-semibold px-6 py-3 rounded-full transition-all duration-200 hover:bg-brand-brown hover:text-brand-cream hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98];
+  }
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .section-heading {
+    @apply font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-brand-brown;
+  }
+  .section-subheading {
+    @apply text-brand-orange font-semibold tracking-widest uppercase text-sm;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}

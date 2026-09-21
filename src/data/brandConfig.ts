@@ -1,0 +1,216 @@
+import { BrandConfig } from "@/types";
+
+export const brandConfig: BrandConfig = {
+  name: "Sholly-T Spaghetti",
+  tagline: "Taste Like You've Never Had.",
+  brandStatement: "Good Food. Great Moments.",
+  shortDescription:
+    "A food brand built around satisfying meals, great taste and memorable moments.",
+  address: "QGQ4+7QM, Ofatedo Road, Osogbo, Osun State, Nigeria",
+  addressFull: "QGQ4+7QM, Ofatedo Road, Osogbo, Osun State, Nigeria",
+  phones: ["0911 816 9456", "0706 368 3953"],
+  whatsappNumber: "2349118169456",
+  instagramUrl: "https://www.instagram.com/shollytspaghettii/",
+  instagramHandle: "@shollytspaghettii",
+  locationNote:
+    "Visit us at QGQ4+7QM, Ofatedo Road, Osogbo, Osun State, Nigeria",
+  openingHours: [
+    { day: "Monday", hours: "9:00 AM - 10:00 PM" },
+    { day: "Tuesday", hours: "9:00 AM - 10:00 PM" },
+    { day: "Wednesday", hours: "9:00 AM - 10:00 PM" },
+    { day: "Thursday", hours: "9:00 AM - 10:00 PM" },
+    { day: "Friday", hours: "9:00 AM - 10:00 PM" },
+    { day: "Saturday", hours: "9:00 AM - 10:00 PM" },
+    { day: "Sunday", hours: "9:00 AM - 10:00 PM" },
+  ],
+  menuCategories: [
+    {
+      id: "spaghetti",
+      name: "Spaghetti",
+      items: [
+        {
+          id: "sig-spaghetti",
+          name: "Signature Spaghetti",
+          description: "Our signature blend of pasta, rich sauce and choice protein.",
+          price: 1500,
+          category: "spaghetti",
+          image: "/images/spaghetti.jpeg",
+        },
+        {
+          id: "special-spaghetti",
+          name: "Special Spaghetti",
+          description: "Premium ingredients with extra flavor and toppings.",
+          price: 2200,
+          category: "spaghetti",
+          image: "/images/hero-food.jpeg",
+        },
+      ],
+    },
+    {
+      id: "rice",
+      name: "Rice",
+      items: [
+        {
+          id: "jollof-rice",
+          name: "Jollof Rice Meal",
+          description: "Classic Nigerian jollof rice served with protein.",
+          price: 1800,
+          category: "rice",
+          image: "/images/rice.jpeg",
+        },
+        {
+          id: "fried-rice",
+          name: "Fried Rice Meal",
+          description: "Tasty fried rice with vegetables and your choice protein.",
+          price: 2000,
+          category: "rice",
+          image: "/images/hero-food.jpeg",
+        },
+      ],
+    },
+    {
+      id: "noodles",
+      name: "Noodles",
+      items: [
+        {
+          id: "chicken-noodles",
+          name: "Chicken Noodles",
+          description: "Savory noodles loaded with tender chicken.",
+          price: 1200,
+          category: "noodles",
+          image: "/images/hero-food.jpeg",
+        },
+        {
+          id: "special-noodles",
+          name: "Special Noodles",
+          description: "Our special recipe with premium spices and toppings.",
+          price: 1500,
+          category: "noodles",
+          image: "/images/hero-food.jpeg",
+        },
+      ],
+    },
+    {
+      id: "proteins",
+      name: "Proteins",
+      items: [
+        {
+          id: "grilled-chicken",
+          name: "Grilled Chicken",
+          description: "Juicy grilled chicken with seasoned spices.",
+          price: 2500,
+          category: "proteins",
+          image: "/images/chicken.jpeg",
+        },
+        {
+          id: "fried-chicken",
+          name: "Fried Chicken",
+          description: "Crispy fried chicken, golden and delicious.",
+          price: 2200,
+          category: "proteins",
+          image: "/images/chicken.jpeg",
+        },
+      ],
+    },
+    {
+      id: "sides",
+      name: "Sides",
+      items: [
+        {
+          id: "fries",
+          name: "French Fries",
+          description: "Golden crispy fries, the perfect companion.",
+          price: 800,
+          category: "sides",
+          image: "/images/sides.jpeg",
+        },
+        {
+          id: "plantain",
+          name: "Fried Plantain",
+          description: "Sweet and savory ripe plantain, fried to perfection.",
+          price: 700,
+          category: "sides",
+          image: "/images/sides.jpeg",
+        },
+      ],
+    },
+    {
+      id: "drinks",
+      name: "Drinks",
+      items: [
+        {
+          id: "soft-drink",
+          name: "Soft Drink",
+          description: "Chilled soft drink to complement your meal.",
+          price: 400,
+          category: "drinks",
+          image: "/images/hero-food.jpeg",
+        },
+        {
+          id: "juice",
+          name: "Fresh Juice",
+          description: "Freshly made juice from natural fruits.",
+          price: 600,
+          category: "drinks",
+          image: "/images/hero-food.jpeg",
+        },
+      ],
+    },
+    {
+      id: "combos",
+      name: "Combos",
+      items: [
+        {
+          id: "combo-1",
+          name: "Classic Combo",
+          description: "Spaghetti, chicken and drink — everything in one.",
+          price: 3500,
+          category: "combos",
+          image: "/images/hero-food.jpeg",
+        },
+        {
+          id: "combo-2",
+          name: "Filling Combo",
+          description: "Rice, protein and drink for a hearty meal.",
+          price: 4000,
+          category: "combos",
+          image: "/images/hero-food.jpeg",
+        },
+      ],
+    },
+    {
+      id: "specials",
+      name: "Specials",
+      items: [
+        {
+          id: "daily-special",
+          name: "Daily Special",
+          description: "Ask your server about today's special dish.",
+          price: 0,
+          category: "specials",
+          image: "/images/hero-food.jpeg",
+        },
+      ],
+    },
+  ],
+  galleryImages: [
+    { id: "g1", src: "/images/gallery-1.jpeg", alt: "Spaghetti dish", category: "Spaghetti" },
+    { id: "g2", src: "/images/gallery-3.jpeg", alt: "Rice dish", category: "Rice" },
+    { id: "g3", src: "/images/packaging.jpeg", alt: "Packaging", category: "Packaging" },
+    { id: "g4", src: "/images/WhatsApp Image 2026-09-21 at 00.17.12.jpeg", alt: "Food plate", category: "Food" },
+    { id: "g5", src: "/images/WhatsApp Image 2026-09-21 at 00.17.14.jpeg", alt: "Restaurant", category: "Restaurant" },
+    { id: "g6", src: "/images/WhatsApp Image 2026-09-21 at 00.17.15 (1).jpeg", alt: "Food close-up", category: "Food" },
+  ],
+  reviews: [
+    { id: "r1", name: "", rating: 5, text: "", source: "Google" },
+    { id: "r2", name: "", rating: 5, text: "", source: "Google" },
+    { id: "r3", name: "", rating: 5, text: "", source: "Google" },
+  ],
+  heroSlides: [
+    { image: "/images/hero-food.jpeg", title: "Signature Spaghetti", subtitle: "Rich, hearty and full of flavor" },
+    { image: "/images/rice.jpeg", title: "Rice Meals", subtitle: "Classic Nigerian comfort" },
+    { image: "/images/chicken.jpeg", title: "Grilled Chicken", subtitle: "Perfectly seasoned and cooked" },
+    { image: "/images/hero-food.jpeg", title: "Combos", subtitle: "Everything you need in one meal" },
+    { image: "/images/sides.jpeg", title: "Sides & Snacks", subtitle: "The perfect addition" },
+  ],
+};
